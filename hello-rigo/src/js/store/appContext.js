@@ -27,7 +27,32 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 **/
+              fetch(
+            "http https://swapi.co/api/people/1/people/"
+        )
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data);
+                this.setState({ list: data });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+fetch(
+            "http https://swapi.co/api/planets/1/planets/"
+        )
+            .then(resp => resp.json())
+            .then(data => {
+                console.log(data);
+                this.setState({ list: data });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
 		}
+
+
 
 		render() {
 			// the initial value for the context its not null anymore, but the current state of this component,
