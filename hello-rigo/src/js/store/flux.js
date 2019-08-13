@@ -7,8 +7,15 @@ const getState = ({ getStore, setStore }) => {
 		},
 		actions: {
 			getPlanets: () => {},
-			markAsFactorite: elementId => {},
-			removeFavorites: elementId => {},
+			markAsFavorite: (elementId, name, gender) => {
+				const store = getStore();
+				setStore({ favorite: store.favorite.concat({ Index: elementId, name: name, Gender: gender }) });
+				//console.log("Index:", elementId);
+			},
+			removeFavorites: (elementId, index) => {
+				const store = getStore();
+				setStore({ favorite: store.favorite.filter((item, i) => i !== index) });
+			},
 			changeColor: (index, color) => {}
 			//get the store
 			/*const store = getStore();

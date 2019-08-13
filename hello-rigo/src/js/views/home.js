@@ -7,8 +7,18 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Characters />
-				<Planets />
+				<div className="container">
+					<div className="row">
+						<h1 className="text-danger mb-5 mt-5">Characters</h1>
+						<Characters />
+					</div>
+				</div>
+				<div className="container">
+					<div className="row">
+						<h1 className="text-danger mb-5 mt-5">Planets</h1>
+						<Planets />
+					</div>
+				</div>
 			</React.Fragment>
 		);
 	}
