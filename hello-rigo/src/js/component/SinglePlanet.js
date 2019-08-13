@@ -31,7 +31,7 @@ export class SinglePlanet extends React.Component {
 												typesetting, remaining essentially unchanged.
 											</p>
 										</div>
-										<div className="row mt-5">
+										<div className="row mt-5 container-fluid">
 											<div className="col-2">
 												<div className="text-danger mb-2">
 													<strong>Name</strong>
