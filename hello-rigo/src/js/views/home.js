@@ -9,13 +9,13 @@ export class Home extends React.Component {
 			<React.Fragment>
 				<div className="container">
 					<div className="row">
-						<h1 className="text-danger mb-5 mt-5">Characters</h1>
+						<h1 className="text-danger mb-5 mt-5">Star Wars Characters</h1>
 						<Characters />
 					</div>
 				</div>
 				<div className="container">
 					<div className="row">
-						<h1 className="text-danger mb-5 mt-5">Planets</h1>
+						<h1 className="text-danger mb-5 mt-5">The Planets</h1>
 						<Planets />
 					</div>
 				</div>

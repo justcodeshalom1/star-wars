@@ -7,6 +7,7 @@ const getState = ({ getStore, setStore }) => {
 		},
 		actions: {
 			getPlanets: () => {},
+
 			markAsFavorite: (elementId, name, gender) => {
 				const store = getStore();
 				setStore({ favorite: store.favorite.concat({ Index: elementId, name: name, Gender: gender }) });

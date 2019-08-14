@@ -22,11 +22,12 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="navbar navbar-light bg-light mb-3 h-23">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">StarWars</span>
+					<img src="https://cdn.iconscout.com/icon/free/png-256/starwars-5-555964.png" className="swimg" />
 				</Link>
 				<div className="ml-auto">
 					<Dropdown direction="left" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-						<DropdownToggle caret>Favorite</DropdownToggle>
+						<DropdownToggle caret>Your Favorites</DropdownToggle>
+
 						<DropdownMenu>
 							<Context.Consumer>
 								{({ store, actions }) => {

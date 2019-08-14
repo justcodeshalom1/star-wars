@@ -1,0 +1,18 @@
+.card-deck{
+   display: flex;
+   width: 4985px;
+   height: 450px;
+}
+
+.card-container {
+    overflow: scroll;
+}
+
+.swimg {
+    height: 110px;
+    width: 110px;
+}
+
+body {
+    background-color: dark rgb(46, 44, 44);
+}

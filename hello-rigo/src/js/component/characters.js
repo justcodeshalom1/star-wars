@@ -3,8 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 const Characters = () => {
 	return (
-		<div className="container">
-			<div className="row">
+		<div className="card-container">
+			<div className="card-deck">
 				<Context.Consumer>
 					{({ store, actions }) => {
 						return store.characters.map((item, index) => {
@@ -33,7 +33,7 @@ const Characters = () => {
 										<button
 											onClick={() => actions.markAsFavorite(index, item.name)}
 											type="button"
-											className="btn btn-light float-right border-warning">
+											className="btn btn-danger float-right border-danger">
 											<i className="far fa-heart" />
 										</button>
 									</div>
