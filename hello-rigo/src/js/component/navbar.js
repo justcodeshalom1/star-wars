@@ -26,8 +26,16 @@ export class Navbar extends React.Component {
 				</Link>
 				<div className="ml-auto">
 					<Dropdown direction="left" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-						<DropdownToggle caret>Your Favorites</DropdownToggle>
-
+						<Context.Consumer>
+							{({ store }) => {
+								return (
+									<DropdownToggle caret>
+										<span className="badge badge-success mr-3">{store.favorite.length}</span>
+										Your Favorites
+									</DropdownToggle>
+								);
+							}}
+						</Context.Consumer>
 						<DropdownMenu>
 							<Context.Consumer>
 								{({ store, actions }) => {
