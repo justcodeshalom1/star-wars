@@ -6,8 +6,6 @@ const getState = ({ getStore, setStore }) => {
 			favorite: []
 		},
 		actions: {
-			getPlanets: () => {},
-
 			markAsFavorite: (elementId, name, gender) => {
 				const store = getStore();
 				setStore({ favorite: store.favorite.concat({ Index: elementId, name: name, Gender: gender }) });
@@ -16,8 +14,7 @@ const getState = ({ getStore, setStore }) => {
 			removeFavorites: (elementId, index) => {
 				const store = getStore();
 				setStore({ favorite: store.favorite.filter((item, i) => i !== index) });
-			},
-			changeColor: (index, color) => {}
+			}
 			//get the store
 			/*const store = getStore();
                 //we have to loop the entire demo array to look for the respective index
